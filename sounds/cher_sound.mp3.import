@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cher_sound.mp3-709ee3905de082946992dfc4b2010d64.mp3str"
+
+[deps]
+
+source_file="res://sounds/cher_sound.mp3"
+dest_files=[ "res://.import/cher_sound.mp3-709ee3905de082946992dfc4b2010d64.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

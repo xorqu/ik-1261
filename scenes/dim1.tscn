@@ -1,0 +1,190 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=1]
+[ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=2]
+[ext_resource path="res://textures/28.png" type="Texture" id=3]
+[ext_resource path="res://scripts/dim1.gd" type="Script" id=4]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sounds/soundtrack1.mp3" type="AudioStream" id=6]
+[ext_resource path="res://textures/tile.png" type="Texture" id=7]
+
+[sub_resource type="SpatialMaterial" id=1]
+
+[sub_resource type="SpatialMaterial" id=121]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="ArrayMesh" id=122]
+surfaces/0 = {
+"aabb": AABB( -120, -1, -144, 240, 2.00001, 288 ),
+"array_data": PoolByteArray( 0, 0, 240, 194, 0, 0, 128, 63, 0, 0, 16, 195, 127, 127, 127, 193, 128, 203, 0, 176, 0, 0, 240, 194, 0, 0, 128, 191, 0, 0, 16, 195, 127, 127, 127, 193, 128, 203, 0, 48, 0, 0, 240, 66, 0, 0, 128, 191, 0, 0, 16, 195, 127, 127, 127, 193, 128, 75, 0, 48, 0, 0, 240, 66, 0, 0, 128, 63, 0, 0, 16, 195, 127, 127, 127, 193, 128, 75, 0, 176, 0, 0, 240, 194, 0, 0, 128, 63, 0, 0, 16, 195, 129, 0, 0, 63, 128, 204, 0, 176, 0, 0, 240, 194, 0, 0, 128, 63, 0, 0, 16, 67, 129, 0, 0, 63, 128, 76, 0, 176, 0, 0, 240, 194, 0, 0, 128, 191, 0, 0, 16, 67, 129, 0, 0, 63, 128, 76, 0, 48, 0, 0, 240, 194, 0, 0, 128, 191, 0, 0, 16, 195, 129, 0, 0, 63, 128, 204, 0, 48, 0, 0, 240, 66, 0, 0, 128, 191, 0, 0, 16, 195, 0, 129, 0, 193, 128, 204, 128, 203, 0, 0, 240, 194, 0, 0, 128, 191, 0, 0, 16, 195, 0, 129, 0, 193, 128, 204, 128, 75, 0, 0, 240, 194, 0, 0, 128, 191, 0, 0, 16, 67, 0, 129, 0, 193, 128, 76, 128, 75, 0, 0, 240, 66, 0, 0, 128, 191, 0, 0, 16, 67, 0, 129, 0, 193, 128, 76, 128, 203, 0, 0, 240, 66, 0, 0, 128, 63, 0, 0, 16, 195, 0, 127, 0, 63, 128, 204, 128, 203, 0, 0, 240, 66, 0, 0, 128, 63, 0, 0, 16, 67, 0, 127, 0, 63, 128, 76, 128, 203, 0, 0, 240, 194, 0, 0, 128, 63, 0, 0, 16, 67, 0, 127, 0, 63, 128, 76, 128, 75, 0, 0, 240, 194, 0, 0, 128, 63, 0, 0, 16, 195, 0, 127, 0, 63, 128, 204, 128, 75, 0, 0, 240, 66, 0, 0, 128, 63, 0, 0, 16, 195, 127, 0, 0, 193, 128, 204, 0, 176, 0, 0, 240, 66, 0, 0, 128, 191, 0, 0, 16, 195, 127, 0, 0, 193, 128, 204, 0, 48, 0, 0, 240, 66, 0, 0, 128, 191, 0, 0, 16, 67, 127, 0, 0, 193, 128, 76, 0, 48, 0, 0, 240, 66, 0, 0, 128, 63, 0, 0, 16, 67, 127, 0, 0, 193, 128, 76, 0, 176, 0, 0, 240, 194, 0, 0, 128, 63, 0, 0, 16, 67, 0, 0, 127, 63, 128, 203, 0, 176, 0, 0, 240, 66, 0, 0, 128, 63, 0, 0, 16, 67, 0, 0, 127, 63, 128, 75, 0, 176, 0, 0, 240, 66, 0, 0, 128, 191, 0, 0, 16, 67, 0, 0, 127, 63, 128, 75, 0, 48, 0, 0, 240, 194, 0, 0, 128, 191, 0, 0, 16, 67, 0, 0, 127, 63, 128, 203, 0, 48 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 36,
+"material": SubResource( 121 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
+
+[sub_resource type="ConvexPolygonShape" id=123]
+points = PoolVector3Array( -120, 1, -144, -120, -1, -144, 120, -1, -144, 120, 1, -144, -120, 1, 144, -120, -1, 144, 120, -1, 144, 120, 1, 144 )
+
+[sub_resource type="ProceduralSky" id=124]
+
+[sub_resource type="Environment" id=125]
+background_mode = 1
+background_sky = SubResource( 124 )
+background_color = Color( 0.286275, 0.278431, 0.262745, 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_enabled = true
+fog_color = Color( 0.286275, 0.278431, 0.262745, 1 )
+fog_sun_color = Color( 0.286275, 0.278431, 0.262745, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 35.0
+fog_depth_curve = 0.406126
+fog_transmit_enabled = true
+fog_transmit_curve = 0.0583146
+glow_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 0.96
+adjustment_contrast = 2.41
+adjustment_saturation = 0.5
+
+[sub_resource type="Shader" id=119]
+code = "shader_type spatial; 
+render_mode skip_vertex_transform, diffuse_lambert_wrap, specular_phong, vertex_lighting, depth_draw_alpha_prepass, cull_disabled;
+
+uniform vec4 tint_color : hint_color = vec4(1.0);
+uniform sampler2D albedoTex : hint_albedo;
+uniform sampler2D dither : hint_albedo;
+uniform float specular_intensity : hint_range(0, 1);
+uniform float vertex_resolution = 256;
+uniform float cull_distance = 9999;
+uniform vec2 uv_scale = vec2(1.0, 1.0);
+uniform vec2 uv_offset = vec2(.0, .0);
+uniform vec2 uv_speed = vec2(0,-1);
+
+uniform bool affine_texture_mapping = true;
+uniform bool emissive = false;
+uniform bool moving_uv = false;
+uniform bool double_sided = false;
+
+uniform bool stippled_transparent = false;
+
+varying vec4 vertex_coordinates;
+
+void vertex() {
+	UV = UV * uv_scale + uv_offset + ((moving_uv)?uv_speed*TIME:vec2(0.0));
+	
+	float vertex_distance = length((MODELVIEW_MATRIX * vec4(VERTEX, 1.0)));
+	
+	VERTEX = (MODELVIEW_MATRIX * vec4(VERTEX, 1.0)).xyz;
+	NORMAL = abs(vec4(NORMAL, 1.) * MODELVIEW_MATRIX).xyz;
+	
+	float vPos_w = (PROJECTION_MATRIX * vec4(VERTEX, 1.0)).w;
+	VERTEX.xy = vPos_w * round(vertex_resolution * VERTEX.xy / vPos_w) / vertex_resolution;
+	vertex_coordinates = vec4(UV * VERTEX.z, VERTEX.z, 0.0);
+	
+	if (vertex_distance > cull_distance)
+		VERTEX = vec3(.0);
+}
+
+void fragment() {
+	if (stippled_transparent && (mod(SCREEN_UV.x*VIEWPORT_SIZE.x+floor(mod(SCREEN_UV.y*VIEWPORT_SIZE.y, 2.0)), 2.0)<1.0)){
+		discard;
+	}
+	
+	vec4 tex;
+	if (affine_texture_mapping){
+		tex = texture(albedoTex, vertex_coordinates.xy / vertex_coordinates.z);
+	} else {
+		tex = texture(albedoTex, UV);
+	}
+	
+	ALPHA_SCISSOR = 0.5;
+	
+	if (!double_sided && !FRONT_FACING){
+		ALPHA = 0.0;
+	} else {
+		ALPHA = tex.a * tint_color.a * COLOR.a;
+	}
+
+	if (emissive){
+		EMISSION = tex.rgb * tint_color.rgb * COLOR.rgb;
+		ALBEDO = vec3(0.0);
+	} else {
+		ALBEDO = tex.rgb * tint_color.rgb * COLOR.rgb;
+	}
+	SPECULAR = specular_intensity;
+	ROUGHNESS = 1.0;
+	
+}
+"
+
+[sub_resource type="ShaderMaterial" id=120]
+shader = SubResource( 119 )
+shader_param/tint_color = Color( 1, 0.843137, 0, 1 )
+shader_param/specular_intensity = 1.0
+shader_param/vertex_resolution = 64.0
+shader_param/cull_distance = 9999.0
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+shader_param/uv_speed = Vector2( 0, -0.15 )
+shader_param/affine_texture_mapping = true
+shader_param/emissive = true
+shader_param/moving_uv = true
+shader_param/double_sided = false
+shader_param/stippled_transparent = false
+shader_param/albedoTex = ExtResource( 7 )
+
+[node name="dim1" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="QodotMap" type="Spatial" parent="."]
+script = ExtResource( 2 )
+map_file = "D:/rs/gd/1261/tb_lvls/1260_dim1.map"
+inverse_scale_factor = 16.0
+entity_fgd = ExtResource( 1 )
+base_texture_dir = "res://textures"
+texture_file_extensions = PoolStringArray( "png" )
+worldspawn_layers = [  ]
+brush_clip_texture = "special/clip"
+face_skip_texture = "special/skip"
+texture_wads = [  ]
+material_file_extension = "tres"
+default_material = SubResource( 1 )
+uv_unwrap_texel_size = 1.0
+print_profiling_data = false
+use_trenchbroom_group_hierarchy = false
+tree_attach_batch_size = 16
+set_owner_batch_size = 16
+
+[node name="entity_0_worldspawn" type="StaticBody" parent="QodotMap"]
+
+[node name="entity_0_mesh_instance" type="MeshInstance" parent="QodotMap/entity_0_worldspawn"]
+use_in_baked_light = true
+mesh = SubResource( 122 )
+
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape" parent="QodotMap/entity_0_worldspawn"]
+shape = SubResource( 123 )
+
+[node name="player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156552, 1.63186, -1.42748 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 125 )
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+transform = Transform( -6.01055, 0, 5.25459e-07, 0, 6.01055, 0, -5.25459e-07, 0, -6.01055, 0, 11.2963, -13.0662 )
+material = SubResource( 120 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 15.0
+pitch_scale = 0.13
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
